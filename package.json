@@ -1,0 +1,29 @@
+{
+  "name": "node-student-manager-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nizar4790k/node-student-manager-backend.git"
+  },
+  "author": "Nizar Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nizar4790k/node-student-manager-backend/issues"
+  },
+  "homepage": "https://github.com/Nizar4790k/node-student-manager-backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
