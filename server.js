@@ -8,6 +8,7 @@ const mongodb = require('mongodb');
 const register = require('./controllers/register');
 const login = require('./controllers/login');
 const students = require('./controllers/students')
+const grades = require('./controllers/grades')
 
 dotenv.config();
 
@@ -57,5 +58,12 @@ app.delete('/students', (req, res) => {
 app.put('/students', (req, res) => {
 
     students.updateStudent(req, res, db);
+
+});
+
+
+app.get('/grades', (req, res) => {
+
+    grades.getGrades(req,res,db)
 
 });
