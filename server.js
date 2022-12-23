@@ -53,3 +53,9 @@ app.delete('/students', (req, res) => {
     students.deleteStudent(req, res, db);
 
 });
+
+app.put('/students', (req, res) => {
+
+    students.updateStudent(req, res, db);
+
+});
