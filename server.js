@@ -67,3 +67,11 @@ app.get('/grades', (req, res) => {
     grades.getGrades(req,res,db)
 
 });
+
+
+
+app.put('/grades', (req, res) => {
+
+    grades.updateGrade(req, res, db);
+
+});
