@@ -9,6 +9,7 @@ const register = require('./controllers/register');
 const login = require('./controllers/login');
 const students = require('./controllers/students')
 const grades = require('./controllers/grades')
+const assistance = require('./controllers/assistance')
 
 dotenv.config();
 
@@ -73,5 +74,12 @@ app.get('/grades', (req, res) => {
 app.put('/grades', (req, res) => {
 
     grades.updateGrade(req, res, db);
+
+});
+
+
+app.get('/assistance', (req, res) => {
+
+    assistance.getAssistance(req, res, db);
 
 });
