@@ -41,6 +41,9 @@ const addStudent = async (req, res, database) => {
 
 }
 
+
+
+
 async function insertStudent(student, collection) {
 
 
@@ -57,6 +60,8 @@ async function insertStudent(student, collection) {
 }
 
 async function getStudents(req, res, database) {
+
+
   const { MongoClient, url, dbName } = database;
 
   const client = await MongoClient.connect(url, { useNewUrlParser: true })
@@ -72,7 +77,27 @@ async function getStudents(req, res, database) {
     const db = client.db(dbName);
     let collection = db.collection("students");
 
-    const students = await collection.find({}).toArray();
+    const nombreEstudiante = req.query.nombre
+
+ 
+
+    var students = []
+
+    if(nombreEstudiante){
+      console.log(nombreEstudiante)
+
+
+    students  = await collection.find({nombre: {'$regex': nombreEstudiante, '$options': 'i'}}).toArray() ;
+    console.log(students)
+    
+    
+    }else{
+
+    students = await collection.find({}).toArray();
+
+    }
+
+    
 
 
     res.status(200).json(students);
