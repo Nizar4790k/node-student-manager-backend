@@ -83,3 +83,10 @@ app.get('/assistance', (req, res) => {
     assistance.getAssistance(req, res, db);
 
 });
+
+
+app.put('/assistance', (req, res) => {
+
+    assistance.updateAssistance(req, res, db);
+
+});
