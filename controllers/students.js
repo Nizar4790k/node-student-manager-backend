@@ -88,7 +88,7 @@ async function getStudents(req, res, database) {
 
 
     students  = await collection.find({nombre: {'$regex': nombreEstudiante, '$options': 'i'}}).toArray() ;
-    console.log(students)
+  
     
     
     }else{

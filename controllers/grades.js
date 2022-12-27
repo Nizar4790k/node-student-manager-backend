@@ -90,7 +90,7 @@ async function updateGrade(req, res, database) {
       projection
     );
 
-    console.log(result);
+
 
     
     if (result.modifiedCount === 1) {
